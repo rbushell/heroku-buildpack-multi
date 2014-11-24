@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-echo "Detecting"
 if [ -f $1/.buildpacks ]; then
   echo "Multipack"
   exit 0
