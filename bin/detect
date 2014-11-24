@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
+echo "WHAT?"
+sleep 5
 if [ -f $1/.buildpacks ]; then
   echo "Multipack"
 else
   echo "no .buildpacks file"
 fi
+sleep 5
