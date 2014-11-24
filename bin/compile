@@ -49,10 +49,10 @@ if [[ -x $dir/bin/detect ]]; then
 fi
     $dir/bin/detect $1
 echo "arrgh"
-    framework=$($dir/bin/detect $1)
-
+#    framework=$($dir/bin/detect $1)
+framework="multipack"
 echo "framework is $framework"
-$?=0
+true
     if [ $? == 0 ]; then
       echo "=====> Detected Framework: $framework"
       $dir/bin/compile $1 $2 $3
@@ -74,6 +74,8 @@ $?=0
         $dir/bin/release $1 > $1/last_pack_release.out
       fi
  echo "whatever"
+    else
+	echo "false?"
     fi
   fi
 done
