@@ -56,17 +56,22 @@ $?=0
       $dir/bin/compile $1 $2 $3
 
       if [ $? != 0 ]; then
+	echo "exiting\n"
+	sleep 5
         exit 1
       fi
 
+ echo "wtf"
       # check if the buildpack left behind an environment for subsequent ones
       if [ -e $dir/export ]; then
         source $dir/export
       fi
 
+ echo "really, wtf"
       if [ -x $dir/bin/release ]; then
         $dir/bin/release $1 > $1/last_pack_release.out
       fi
+ echo "whatever"
     fi
   fi
 done
