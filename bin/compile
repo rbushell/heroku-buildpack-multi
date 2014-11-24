@@ -47,6 +47,8 @@ echo "detecting with $dir/bin/detect $1"
 if [[ -x $dir/bin/detect ]]; then
   echo "executable"
 fi
+    $dir/bin/detect $1
+echo "arrgh"
     framework=$($dir/bin/detect $1)
 
 echo "framework is $framework"
